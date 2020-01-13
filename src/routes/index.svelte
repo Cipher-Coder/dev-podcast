@@ -51,20 +51,23 @@
 <div>
   <div class="container">
     <img alt="Logo" src="cover.png" class="logo-pic" />
-    <h1>Podcasts geared towards developers!</h1>
+    <h1>Podcasts for developers!</h1>
   </div>
-
   <div class="container">
     <figure>
       <img alt="Borat" src="studio.jpg" class="main-pic" />
       <figcaption>HIGH FIVE!</figcaption>
     </figure>
-
     <p>
       <strong>
         Try editing this file (src/routes/index.svelte) to test live reloading.
       </strong>
     </p>
+  </div>
+  <div class="columns">
+    <div class="column">This is a column!!!!</div>
+    <div class="column" />
+    This is a column 2!!!!
   </div>
 
 </div>
