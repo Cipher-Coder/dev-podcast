@@ -1,20 +1,20 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
-	"display": "minimal-ui",
-	"start_url": "/",
-	"icons": [
-		{
-			"src": "logo-192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "logo-512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "name": "Developer-Podcasts",
+  "short_name": "Dev-Podcasts",
+  "display": "minimal-ui",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "profile192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "profile512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

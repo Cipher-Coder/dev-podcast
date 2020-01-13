@@ -46,7 +46,7 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Developer Podcasts</title>
 </svelte:head>
 <div>
   <div class="container">
