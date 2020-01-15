@@ -7,12 +7,12 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "profile192.png",
+      "src": "img/profile192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "profile512.png",
+      "src": "img/profile512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

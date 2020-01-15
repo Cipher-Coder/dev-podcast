@@ -24,6 +24,7 @@
 
   .logo-pic {
     max-width: 600px;
+    margin-top: -20px;
   }
 
   .main-pic {
@@ -50,13 +51,13 @@
 </svelte:head>
 <div>
   <div class="container">
-    <img alt="Logo" src="cover.png" class="logo-pic" />
-    <h1>Podcasts for developers!</h1>
+    <img alt="Logo" src="img/cover.png" class="logo-pic" />
+    <h1>Rank Your Favorite Developer Podcast!</h1>
   </div>
   <div class="container">
     <figure>
-      <img alt="Borat" src="studio.jpg" class="main-pic" />
-      <figcaption>HIGH FIVE!</figcaption>
+      <img alt="Audio Studio" src="img/studio.jpg" class="main-pic" />
+      <figcaption>Podcasting Studio</figcaption>
     </figure>
     <p>
       <strong>
