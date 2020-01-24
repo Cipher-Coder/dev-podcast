@@ -1,86 +1,91 @@
+<script>
+  import { onMount } from "svelte";
+  let posts = [];
+
+  onMount(async () => {
+    const res = await fetch(
+      "https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts"
+    );
+    if (res.status === 200) {
+      posts = (await res.json()).podcasts;
+    } else {
+      this.error("Error returning podcasts");
+    }
+  });
+</script>
+
 <style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
   h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 25px 20px;
   }
 
-  figure {
-    margin: 0 0 1em 0;
+  h3 {
+    font-size: 1.25rem;
+    margin: 20px 10px;
   }
 
-  img {
-    margin: 0 0 1em 0;
+  .focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  .main-pic {
-    max-width: 580px;
+  @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
-
-  .audio-column {
-    text-align: center;
-    margin: auto;
-  }
-
-  audio {
-    margin: auto;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-  .container {
-    text-align: center;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 2.8em;
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
     }
   }
 </style>
 
 <svelte:head>
-  <title>Developer Podcasts</title>
+  <title>Home | Top Podcasts</title>
 </svelte:head>
-<div>
-  <div class="container">
-    <h1>Rank Your Favorite Developer Podcast!</h1>
-  </div>
-  <div class="container">
-    <figure>
-      <img alt="Audio Studio" src="img/studio.jpg" class="main-pic" />
-      <figcaption>Podcasting Studio</figcaption>
-    </figure>
-    <p>
-      <strong>
-        Try editing this file (src/routes/index.svelte) to test live reloading.
-      </strong>
-    </p>
-  </div>
-  <div class="columns">
-    <div class="column">This is a column!!!!</div>
-    <div class="column audio-column">
-      <img
-        src="https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/60/4e/d6/604ed6ba-6a5a-5faa-edf5-189a290f3aa3/source/100x100bb.jpg"
-        alt="Podcast Photo" />
-      <audio controls>
-        <source
-          src="https://traffic.libsyn.com/syntax/Syntax214.mp3"
-          type="audio/mpeg" />
-        Your browser does not support the audio tag.
-      </audio>
-    </div>
-    <div class="column" />
-    This is a column 2!!!!
-  </div>
 
+<div class="row">
+  <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+  {#each posts as post}
+    <div class="col s6">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is48x48">
+                <img src={post.image} alt="Album Cover" />
+              </figure>
+
+            </div>
+          </div>
+          <div class="media-content">
+            <p class="title is-5">{post.name}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {:else}
+    <p>No posts</p>
+  {/each}
+  <h3>More to Come!!!</h3>
 </div>

@@ -71,7 +71,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href=".">
-      <img src="img/logoEdit.png" width="112" height="30" alt="Logo" />
+      <img src="img/fullLogo.png" width="142" height="38" alt="Logo" />
     </a>
     <span
       role="button"
