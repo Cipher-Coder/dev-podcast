@@ -27,24 +27,11 @@
   }
 
   .focus-in-expand {
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
-    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
-  @-webkit-keyframes focus-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      -webkit-filter: blur(12px);
-      filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-      filter: blur(0px);
-      opacity: 1;
-    }
-  }
   @keyframes focus-in-expand {
     0% {
       letter-spacing: -0.5em;
