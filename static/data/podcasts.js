@@ -191,7 +191,7 @@ export const podcasts = [
     name: "Does not Compute",
     link: "https://rss.simplecast.com/podcasts/1386/rss",
     img:
-      "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/a1/29/7a/a1297a9c-9b14-1b3d-e4fb-1ed236ab2e68/mza_6690556803391066642.jpg/100x100bb.jpg",
+      "https://is3-ssl.mzstatic.com/image/thumb/Podcasts113/v4/46/35/2f/46352fad-0c00-7aa7-5f28-f6fb180efb29/mza_6786053680637944333.jpg/100x100bb.jpg",
   },
   {
     category: "general",
