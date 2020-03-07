@@ -1,16 +1,13 @@
 <script>
   import { onMount } from "svelte";
+  const URL =
+    "https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer";
   let posts = [];
 
-  onMount(async () => {
-    const res = await fetch(
-      "https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/podcasts"
-    );
-    if (res.status === 200) {
-      posts = (await res.json()).podcasts;
-    } else {
-      this.error("Error returning podcasts");
-    }
+  onMount(async function() {
+    const res = await fetch(URL);
+    const json = await res.json();
+    posts = json["developer"];
   });
 </script>
 
