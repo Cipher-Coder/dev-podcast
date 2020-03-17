@@ -1,26 +1,26 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
 
-  export let segment;
+  export let segment
 
   onMount(() => {
     const navbarBurgers = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
+      document.querySelectorAll('.navbar-burger'),
       0
-    );
+    )
 
     if (navbarBurgers.length > 0) {
       navbarBurgers.forEach(el => {
-        el.addEventListener("click", () => {
-          const target = el.dataset.target;
-          const target2 = document.getElementById(target);
+        el.addEventListener('click', () => {
+          const target = el.dataset.target
+          const target2 = document.getElementById(target)
 
-          el.classList.toggle("is-active");
-          target2.classList.toggle("is-active");
-        });
-      });
+          el.classList.toggle('is-active')
+          target2.classList.toggle('is-active')
+        })
+      })
     }
-  });
+  })
 </script>
 
 <style>
@@ -28,6 +28,10 @@
     border-bottom: 1px solid rgba(255, 62, 0, 0.1);
     font-weight: 600;
     padding: 0 1em;
+  }
+
+  .navbar-brand {
+    padding-top: 10px;
   }
 
   .selected {
@@ -42,7 +46,7 @@
 
   .selected::after {
     position: absolute;
-    content: "";
+    content: '';
     width: calc(100% - 1em);
     height: 2px;
     background-color: #19d1b2;
@@ -71,7 +75,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href=".">
-      <img src="img/fullLogo.png" width="142" height="38" alt="Logo" />
+      <img src="img/newLogoSideWays.png" alt="Logo" />
     </a>
     <span
       role="button"

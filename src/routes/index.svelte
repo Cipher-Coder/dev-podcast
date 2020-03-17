@@ -1,14 +1,14 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
   const URL =
-    "https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer";
-  let posts = [];
+    'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'
+  let posts = []
 
   onMount(async function() {
-    const res = await fetch(URL);
-    const json = await res.json();
-    posts = json["developer"];
-  });
+    const res = await fetch(URL)
+    const json = await res.json()
+    posts = json['developer']
+  })
 </script>
 
 <style>
@@ -48,10 +48,10 @@
   <title>Home | Top Podcasts</title>
 </svelte:head>
 
-<div class="row">
+<div class="column">
   <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
   {#each posts as post}
-    <div class="col s6">
+    <div class="column">
       <div class="card">
         <div class="card-content">
           <div class="media">

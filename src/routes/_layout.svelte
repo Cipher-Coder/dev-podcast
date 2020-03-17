@@ -1,25 +1,45 @@
 <script>
-  import Nav from "../components/Nav.svelte";
-  import Footer from "../components/Footer.svelte";
+  import { onMount } from 'svelte'
+  import Nav from '../components/Nav.svelte'
+  import Footer from '../components/Footer.svelte'
+  import Sidebar from '../components/Sidebar.svelte'
 
-  export let segment;
+  export let segment
+  let showNavbar = false
+  const mediaQueryHandler = e => {
+    if (e.matches) {
+      showNavbar = false
+    } else {
+      showNavbar = true
+    }
+  }
+
+  onMount(() => {
+    const mediaListener = window.matchMedia('(min-width: 767px)')
+    mediaListener.addListener(mediaQueryHandler)
+  })
 </script>
 
 <style>
   main {
     position: relative;
-    max-width: 56em;
     background-color: white;
-    padding: 2em;
-    margin: 0 auto;
+    margin-left: 10rem;
     box-sizing: border-box;
+    min-width: 40%;
   }
 </style>
 
-<Nav {segment} />
+<div class="columns">
+  {#if showNavbar != false}
+    <Nav {segment} />
+  {:else}
+    <Sidebar />
+  {/if}
 
-<main>
-  <slot />
-</main>
+  <main>
+    <slot />
+  </main>
+</div>
 
 <Footer />
