@@ -29,12 +29,26 @@
     text-decoration: none;
     color: #ccb20c;
   }
+
+  .logo-img {
+    min-height: 38px;
+    min-width: 130px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }
 </style>
 
 <div class="column sidebar is-1">
   <aside class="menu">
     <a href=".">
-      <img src="img/newLogoSideWays.png" alt="RankCasts Logo" />
+      <img
+        class="logo-img"
+        src="img/newLogoSideWays.png"
+        alt="RankCasts Logo" />
     </a>
     <p class="menu-label">Catagories</p>
     <ul class="menu-list">

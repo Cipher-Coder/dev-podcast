@@ -70,6 +70,12 @@
   a:hover {
     color: gray;
   }
+
+  @media only screen and (min-width: 767px) {
+    nav {
+      display: none;
+    }
+  }
 </style>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">

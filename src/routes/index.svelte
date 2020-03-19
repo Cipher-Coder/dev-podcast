@@ -1,5 +1,7 @@
 <script>
   import { onMount } from 'svelte'
+  import SubmitForm from '../components/SubmitForm.svelte'
+
   const URL =
     'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'
   let posts = []
@@ -15,7 +17,6 @@
   h1 {
     font-size: 2rem;
     font-weight: bold;
-    margin: 25px 20px;
   }
 
   h3 {
@@ -42,16 +43,35 @@
       opacity: 1;
     }
   }
+
+  .title {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    margin-left: 40px;
+  }
+
+  .is-right {
+    float: right;
+  }
 </style>
 
 <svelte:head>
   <title>Home | Top Podcasts</title>
 </svelte:head>
-
 <div class="column">
-  <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+  <div class="title">
+    <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+  </div>
+
+  <div class="column is-right">
+    <SubmitForm />
+  </div>
   {#each posts as post}
-    <div class="column">
+    <div class="column card-container is-half">
       <div class="card">
         <div class="card-content">
           <div class="media">

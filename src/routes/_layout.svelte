@@ -21,13 +21,19 @@
 </script>
 
 <style>
-  main {
+  /* main {
     position: relative;
     background-color: white;
     margin-left: 10rem;
     box-sizing: border-box;
     min-width: 40%;
   }
+
+  @media (max-width: 767px) {
+    main {
+      margin: 7px;
+    }
+  } */
 </style>
 
 <div class="columns">
@@ -36,10 +42,7 @@
   {:else}
     <Sidebar />
   {/if}
-
-  <main>
-    <slot />
-  </main>
+  <slot />
 </div>
 
 <Footer />
