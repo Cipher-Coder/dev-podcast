@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
+  import PodSearch from '../components/PodSearch.svelte'
 
   const URL =
     'https://v2-api.sheety.co/0b5f365fe37e4932db5dabe9775b63d0/podcastList/developer'
@@ -69,6 +70,7 @@
 
   <div class="column is-right">
     <SubmitForm />
+    <PodSearch />
   </div>
   {#each posts as post}
     <div class="column card-container is-half">
