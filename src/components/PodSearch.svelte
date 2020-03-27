@@ -54,20 +54,35 @@
     font-size: 1rem;
   }
 
-  input:focus {
-    outline: 1px solid rgb(167, 167, 167);
+  /* input {
+    padding: 4px;
+    border-radius: 6px;
   }
+
+  input:focus {
+    outline: none;
+    border-radius: 6px;
+    outline: 2px solid #712391e1;
+  } */
 
   ol {
     list-style-type: square;
   }
+
+  .button {
+    margin-top: 8px;
+  }
 </style>
 
 <article class="column">
-  <h2 class="submit-title">Search for Podcast</h2>
+  <h2 class="submit-title">Search for your favorite podcast:</h2>
   <form on:submit|preventDefault={submissionHandler}>
     <label for="name">Search:</label>
-    <input bind:value={searchParam} id="search" type="text" />
+    <input
+      bind:value={searchParam}
+      id="search"
+      type="text"
+      class="input is-small" />
     <br />
     <button type="submit" class="button" id="searchbutton">Search</button>
   </form>

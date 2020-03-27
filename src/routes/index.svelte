@@ -1,5 +1,8 @@
 <script>
   import { onMount } from 'svelte'
+  import PodCard from '../components/PodCard.svelte'
+  import VoteButton from '../components/VoteButton.svelte'
+  import AudioPlayer from '../components/AudioPlayer.svelte'
   import SubmitForm from '../components/SubmitForm.svelte'
   import PodSearch from '../components/PodSearch.svelte'
 
@@ -51,10 +54,6 @@
     margin-bottom: 20px;
   }
 
-  .card-container {
-    margin-left: 40px;
-  }
-
   .is-right {
     float: right;
   }
@@ -67,31 +66,35 @@
   <div class="title">
     <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
   </div>
-
-  <div class="column is-right">
-    <SubmitForm />
-    <PodSearch />
-  </div>
-  {#each posts as post}
-    <div class="column card-container is-half">
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is48x48">
-                <img src={post.image} alt="Album Cover" />
-              </figure>
-
-            </div>
-          </div>
-          <div class="media-content">
-            <p class="title is-5">{post.name}</p>
-          </div>
-        </div>
+  <div class="container">
+    <div class="column is-one-third is-right">
+      <div class="row">
+        <SubmitForm />
       </div>
+      <div class="row">
+        <PodSearch />
+      </div>
+
     </div>
-  {:else}
-    <p>No posts</p>
-  {/each}
-  <h3>More to Come!!!</h3>
+    {#each posts as post}
+      <PodCard src={post.image} name={post.name} alt={post.name}>
+        <span slot="audio">
+          <AudioPlayer audioSrc="./sample.mp3" />
+        </span>
+        <span slot="vote">
+          <VoteButton count={post.likes} />
+        </span>
+      </PodCard>
+    {:else}
+      <p class="sorry-msg">
+        Sorry... No Podcasts to display! Please add one with the Submit form!
+      </p>
+    {/each}
+
+  </div>
+
+  <h3>
+    Your favorite podcast not here? Use the Submit form at the top and see what
+    others think about your picks!!
+  </h3>
 </div>

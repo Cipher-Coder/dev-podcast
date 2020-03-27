@@ -63,9 +63,21 @@
     font-size: 1rem;
   }
 
-  input:focus {
-    outline: 1px solid rgb(167, 167, 167);
+  .button {
+    margin-top: 8px;
   }
+
+  /* input {
+    padding: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    outline: none;
+    border-radius: 4px;
+    outline: 2px solid #712391e1;
+  } */
 </style>
 
 <article class="container">
@@ -77,10 +89,19 @@
     on:invalid={validateForm}
     on:changed={validateForm}
     on:input={validateForm}>
-    <label for="podcastName">Podcast Name:</label>
-    <input required type="text" id="podcastName" />
-    <label for="podcastUrl">Podcast Feed URL</label>
-    <input required type="url" id="podcastUrl" />
+    <label for="podcastName" class="label-name">Podcast Name:</label>
+    <input
+      required
+      type="text"
+      id="podcastName"
+      class="input-name input is-small" />
+    <br />
+    <label for="podcastUrl" class="label-url">Podcast Feed URL:</label>
+    <input
+      required
+      type="url"
+      id="podcastUrl"
+      class="input-url input is-small" />
     <br />
     {#if error_boolean}
       <p class="form-error">Format: https://example.com</p>
