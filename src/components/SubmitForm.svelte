@@ -66,18 +66,6 @@
   .button {
     margin-top: 8px;
   }
-
-  /* input {
-    padding: 4px;
-    margin-bottom: 4px;
-    border-radius: 4px;
-  }
-
-  input:focus {
-    outline: none;
-    border-radius: 4px;
-    outline: 2px solid #712391e1;
-  } */
 </style>
 
 <article class="container">

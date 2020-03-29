@@ -54,17 +54,6 @@
     font-size: 1rem;
   }
 
-  /* input {
-    padding: 4px;
-    border-radius: 6px;
-  }
-
-  input:focus {
-    outline: none;
-    border-radius: 6px;
-    outline: 2px solid #712391e1;
-  } */
-
   ol {
     list-style-type: square;
   }
