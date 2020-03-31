@@ -1,5 +1,5 @@
 <script>
-  let year = new Date().getFullYear();
+  let year = new Date().getFullYear()
 </script>
 
 <style>

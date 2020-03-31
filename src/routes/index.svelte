@@ -57,6 +57,7 @@
   .is-right {
     float: right;
   }
+
 </style>
 
 <svelte:head>
@@ -74,7 +75,6 @@
       <div class="row">
         <PodSearch />
       </div>
-
     </div>
     {#each posts as post}
       <PodCard src={post.image} name={post.name} alt={post.name}>
@@ -90,9 +90,7 @@
         Sorry... No Podcasts to display! Please add one with the Submit form!
       </p>
     {/each}
-
   </div>
-
   <h3>
     Your favorite podcast not here? Use the Submit form at the top and see what
     others think about your picks!!

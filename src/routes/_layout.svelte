@@ -6,43 +6,29 @@
 
   export let segment
   let showNavbar = false
-  const mediaQueryHandler = e => {
-    if (e.matches) {
-      showNavbar = false
-    } else {
-      showNavbar = true
-    }
-  }
 
   onMount(() => {
-    const mediaListener = window.matchMedia('(min-width: 767px)')
-    mediaListener.addListener(mediaQueryHandler)
+    const mediaListener = window.matchMedia('(max-width: 767px)')
+    mediaListener.addEventListener('change', e => {
+      showNavbar = e.matches
+    })
   })
 </script>
 
 <style>
-  /* main {
-    position: relative;
-    background-color: white;
-    margin-left: 10rem;
-    box-sizing: border-box;
-    min-width: 40%;
-  }
 
-  @media (max-width: 767px) {
-    main {
-      margin: 7px;
-    }
-  } */
 </style>
 
 <div class="columns">
-  {#if showNavbar != false}
+  {#if showNavbar !== false}
+  <div class="top-nav">
     <Nav {segment} />
+  </div>
   {:else}
+  <div class="side-nav is-1">
     <Sidebar />
+  </div>
   {/if}
   <slot />
 </div>
-
 <Footer />

@@ -20,7 +20,6 @@
   <div class="card">
     <div class="card-content">
       <div class="media">
-
         <div class="media-left">
           <figure class="image is48x48">
             <img {src} {alt} />

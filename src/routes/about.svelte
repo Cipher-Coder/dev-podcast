@@ -4,28 +4,37 @@
 
 <style>
   .intro {
-    margin: 45px 0;
+    margin-top: 58px;
   }
 
   .microphone {
     border-radius: 6px;
-    -webkit-box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0px,
-      rgba(50, 50, 93, 0.5) -39px 62.5px 125px -25px,
-      rgba(0, 0, 0, 0.3) 23.4px 37.5px 75px -37.5px;
-    box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0px,
-      rgba(50, 50, 93, 0.5) -39px 62.5px 125px -25px,
-      rgba(0, 0, 0, 0.3) 23.4px 37.5px 75px -37.5px;
+    -webkit-box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0,
+      rgba(50, 50, 93, 0.5) -39px 62px 125px -25px,
+      rgba(0, 0, 0, 0.3) 23px 37px 75px -37px;
+    box-shadow: rgba(26, 26, 67, 0.05) 1px 1px 5px 0,
+      rgba(50, 50, 93, 0.5) -39px 62px 125px -25px,
+      rgba(0, 0, 0, 0.3) 23px 37px 75px -37px;
+  }
+
+  .mic-pic {
+    margin-bottom: 30px;
   }
 
   h1 {
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 16px;
   }
 
   h2 {
     font-size: 1.75rem;
     font-weight: bold;
     margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
   }
 
   .writing {
@@ -61,19 +70,20 @@
 </style>
 
 <svelte:head>
-  <title>About | Top Podcasts</title>
+  <title>About | RankCasts</title>
 </svelte:head>
 
 <div class="container intro">
   <div class="columns">
-    <div class="column">
+    <div class="column mic-pic">
       <img
         class="microphone"
         src="img/microphone1.jpg"
-        alt="Professional microphone" />
+        alt="Professional microphone"
+      />
     </div>
     <div class="column">
-      <h1 class="is-centered">About Developer Podcasts</h1>
+      <h1 class="is-centered">About RankCasts</h1>
       <p class="writing">
         Podcasts have become a cultural phenomenon! They can inform, teach,
         entertain, and much much more! Everyone loves them, including me!
@@ -82,7 +92,7 @@
         The problem I encountered was there was no where I could go and just
         type in "Developer Podcasts" and find them. Not just find them but find
         the good ones. I searched and searched. Made my own list... but then I
-        had to spend the time listeneing to every single one, just to find out
+        had to spend the time listening to every single one, just to find out
         which one was good. This has taken hours and I am still finding more and
         more that I want to try out.
       </p>
@@ -96,18 +106,21 @@
   </div>
   <div class="container projects is-centered">
     <h2>Check out some of my other projects:</h2>
+    <h3>Dev Tabs - A New Tab / Startpage for Developers</h3>
   </div>
   <div class="devtabs columns">
     <figure class="figure-container">
       <img
         class="devtabs-img column"
         src="img/devtabs.png"
-        alt="Screenshot of Dev Tabs" />
+        alt="Screenshot of Dev Tabs"
+      />
       <figcaption class="caption">
         <a
           href="https://mattaz.com/devtabs"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Dev Tabs Browser Extension
         </a>
       </figcaption>

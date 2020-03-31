@@ -21,9 +21,9 @@
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    -moz-box-shadow: 2px 2px 4px 0px #9624c4;
-    -webkit-box-shadow: 2px 2px 4px 0px #9624c4;
-    box-shadow: 2px 2px 4px 0px#9624c4;
+    -moz-box-shadow: 2px 2px 4px 0 #9624c4;
+    -webkit-box-shadow: 2px 2px 4px 0 #9624c4;
+    box-shadow: 2px 2px 4px 0 #9624c4;
     -moz-border-radius: 90px;
     -webkit-border-radius: 90px;
     border-radius: 90px;
@@ -57,5 +57,4 @@
     src={audioSrc}
     preload="auto"
     controls />
-
 </article>

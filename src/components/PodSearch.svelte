@@ -66,7 +66,7 @@
 <article class="column">
   <h2 class="submit-title">Search for your favorite podcast:</h2>
   <form on:submit|preventDefault={submissionHandler}>
-    <label for="name">Search:</label>
+    <label for="search">Search:</label>
     <input
       bind:value={searchParam}
       id="search"
