@@ -65,7 +65,7 @@
 </svelte:head>
 <div class="column">
   <div class="title">
-    <h1 class="focus-in-expand">Rank The Best Developer Podcasts:</h1>
+    <h1 class="focus-in-expand">Like Your Favorite Podcasts:</h1>
   </div>
   <div class="container">
     <div class="column is-one-third is-right">
