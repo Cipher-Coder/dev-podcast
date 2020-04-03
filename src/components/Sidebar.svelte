@@ -11,7 +11,7 @@
   .menu-label {
     margin-left: 45px;
     font-weight: 600;
-    color: #f3b70e;
+    color: #000000;
   }
 
   .menu-list {
