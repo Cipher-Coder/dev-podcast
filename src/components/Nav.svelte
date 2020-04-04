@@ -89,9 +89,9 @@
       aria-label="menu"
       aria-expanded="false"
       data-target="navMenu">
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
-      <span aria-hidden="true" />
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </span>
   </div>
   <div id="navMenu" class="navbar-menu">
@@ -100,6 +100,6 @@
       <a class:selected={segment === 'about'} href="about">About</a>
       <a rel="prefetch" class:selected={segment === 'blog'} href="blog">Blog</a>
     </div>
-    <div class="navbar-end" />
+    <div class="navbar-end"></div>
   </div>
 </nav>
