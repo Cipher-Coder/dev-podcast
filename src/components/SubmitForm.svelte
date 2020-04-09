@@ -64,11 +64,11 @@
   }
 
   .button {
-    margin-top: 8px;
+    margin: 12px 0;
   }
 </style>
 
-<article class="container">
+<article class="column">
   <h2 class="submit-title">Submit An Awesome Podcast!</h2>
   <form
     id="podcast-submission"

@@ -59,7 +59,7 @@
   }
 
   .button {
-    margin-top: 8px;
+    margin: 12px 0;
   }
 </style>
 
