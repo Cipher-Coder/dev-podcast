@@ -1,5 +1,6 @@
 <script>
   export let count = 0
+  export let id = 0
   let url = ''
 
   function handleVote() {
@@ -31,5 +32,5 @@
 
 <div class="voting">
   <button on:click={handleVote} class="upvote-btn button">&#128077;</button>
-  <p class="ranking-p">Upvotes: {count}</p>
+  <p class="ranking-p">Upvotes: {count} id: {id}</p>
 </div>

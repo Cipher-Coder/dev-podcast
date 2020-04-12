@@ -76,18 +76,13 @@
         <PodSearch />
       </div>
     </div>
-    {#each posts as post}
+    {#each posts as post (post.id)}
       <PodCard src={post.image} name={post.name} alt={post.name}>
         <span slot="audio">
-        
         <AudioPlayer audioSrc="./data/sample.mp3" />
-        
         </span>
         <span slot="vote">
-        
-        <VoteButton count={post.likes} />
-      
-          
+        <VoteButton count={post.likes} id={post.id} />
         </span>
       </PodCard>
     {:else}
