@@ -37,11 +37,13 @@
   .selected {
     position: relative;
     display: inline-block;
-    color: #19d1b2;
+    color: #3f3f3f;
+    text-shadow: 2px 2px 8px rgb(195, 0, 255);
   }
 
   .selected:hover {
-    color: #19d1b2;
+    color: #3f3f3f;
+    text-shadow: 2px 2px 8px rgb(195, 0, 255);
   }
 
   .selected::after {
@@ -49,7 +51,7 @@
     content: '';
     width: calc(100% - 1em);
     height: 2px;
-    background-color: #19d1b2;
+    background-color: rgb(255, 251, 0);
     display: block;
     bottom: -1px;
   }
@@ -59,17 +61,17 @@
       display: none;
     }
   }
-
-  a {
+a {
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
-    color: #000;
+    color: #9624c4;
   }
 
   a:hover {
-    color: gray;
-  }
+    color: #ccb20c;
+    background-color: #ffffff;
+  }  
 
   @media only screen and (min-width: 767px) {
     nav {
@@ -98,7 +100,8 @@
     <div class="navbar-start">
       <a class:selected={segment === undefined} href=".">Home</a>
       <a class:selected={segment === 'about'} href="about">About</a>
-      <a rel="prefetch" class:selected={segment === 'blog'} href="blog">Blog</a>
+      <a class:selected={segment === 'comedy'} href="comedy">Comedy</a>
+      <a class:selected={segment === 'politics'} href="politics">Politics</a>
     </div>
     <div class="navbar-end"></div>
   </div>

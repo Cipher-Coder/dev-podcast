@@ -7,28 +7,30 @@
   export let segment
   let showNavbar = false
 
-  onMount(() => {
-    const mediaListener = window.matchMedia('(max-width: 767px)')
-    mediaListener.addEventListener('change', e => {
-      showNavbar = e.matches
-    })
-  })
 </script>
 
 <style>
+@media only screen and (max-width: 768px) {
+    :global(.sidebar) {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 767px) {
+    :global(.navbar) {
+      display: none;
+    }
+  }
 
 </style>
 
-<div class="columns">
-  {#if showNavbar !== false}
+<div class="columns"> 
   <div class="top-nav">
     <Nav {segment} />
   </div>
-  {:else}
   <div class="side-nav is-1">
-    <Sidebar />
+    <Sidebar {segment}/>
   </div>
-  {/if}
   <slot />
 </div>
 <Footer />
