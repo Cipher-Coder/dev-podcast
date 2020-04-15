@@ -24,13 +24,13 @@
 
 </style>
 
-<div class="columns"> 
+<div class="columns">
   <div class="top-nav">
     <Nav {segment} />
   </div>
   <div class="side-nav is-1">
     <Sidebar {segment}/>
   </div>
-  <slot />
+<slot />
 </div>
 <Footer />

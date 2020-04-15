@@ -28,12 +28,12 @@ export let segment
     position: relative;
     display: inline-block;
     color: #3f3f3f;
-    text-shadow: 2px 2px 8px rgba(195, 0, 255, 0.65);
+    text-shadow: 2px 2px 8px rgba(238, 255, 0, 0.65);
   }
 
   .selected:hover {
     color: #3f3f3f;
-    text-shadow: 2px 2px 8px rgba(195, 0, 255, 0.65);
+    text-shadow: 2px 2px 8px rgba(238, 255, 0, 0.65);
   }
 
   .selected::after {
@@ -41,7 +41,7 @@ export let segment
     content: '';
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(195, 0, 255);
+    background-color: rgb(185, 197, 19);
     display: block;
     bottom: -1px;
   }

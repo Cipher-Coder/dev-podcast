@@ -15,7 +15,7 @@
 
 <style>
   audio {
-    width: 75%;
+    width: 100%;
     margin: 0.5em auto 1em auto;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;

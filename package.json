@@ -2,8 +2,19 @@
   "name": "dev-podcast",
   "description": "Developer Podcasts",
   "version": "0.0.1",
+  "author": {
+    "name": "Matthew Rebehn",
+    "email": "matthew@mattaz.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cipher-Coder/dev-podcast"
+  },
+  "bugs":{
+    "url": "https://github.com/Cipher-Coder/dev-podcast/issues"
+  },
   "scripts": {
-    "develop": "sapper dev",
+    "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
