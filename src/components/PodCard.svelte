@@ -16,7 +16,7 @@
   }
 </style>
 
-<div class="column is-three-fifths s6">
+<div class="column is-half s6">
   <div class="card">
     <div class="card-content">
       <div class="media">
