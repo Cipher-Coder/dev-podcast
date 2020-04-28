@@ -1,8 +1,8 @@
 /*NOTE:
-Check these three colors for this app
-Light Grey Blue #9DBCD4
-Bright Yellow #FFFD01
-Light Purple #6D5ACF
+ Check these three colors for this app
+ Light Grey Blue #9DBCD4
+ Bright Yellow #FFFD01
+ Light Purple #6D5ACF
 */
 
 body {
@@ -12,7 +12,6 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #333;
-  color: #ff0000;
 }
 
 h1,
