@@ -76,20 +76,23 @@
     on:submit|preventDefault={handleSubmit}
     on:invalid={validateForm}
     on:changed={validateForm}
-    on:input={validateForm}>
+    on:input={validateForm}
+  >
     <label for="podcastName" class="label-name">Podcast Name:</label>
     <input
       required
       type="text"
       id="podcastName"
-      class="input-name input is-small" />
+      class="input-name input is-small is-warning"
+    />
     <br />
     <label for="podcastUrl" class="label-url">Podcast Feed URL:</label>
     <input
       required
       type="url"
       id="podcastUrl"
-      class="input-url input is-small" />
+      class="input-url input is-small is-warning"
+    />
     <br />
     {#if error_boolean}
       <p class="form-error">Format: https://example.com</p>
@@ -97,7 +100,5 @@
     <div id="submission">
       <button id="submitButton" class="button" type="submit">Submit</button>
     </div>
-
   </form>
-
 </article>

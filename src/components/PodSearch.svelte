@@ -71,7 +71,8 @@
       bind:value={searchParam}
       id="search"
       type="text"
-      class="input is-small" />
+      class="input is-small is-warning"
+    />
     <br />
     <button type="submit" class="button" id="searchbutton">Search</button>
   </form>
@@ -81,7 +82,6 @@
     {:else}
       {#await result}
         <p>Loading...</p>
-
       {:then results}
         <h4>Results:</h4>
         <ol>
@@ -89,15 +89,13 @@
             <SearchResults
               artist={searchResults.artistName}
               title={searchResults.collectionName}
-              feedURL={searchResults.feedUrl} />
+              feedURL={searchResults.feedUrl}
+            />
           {/each}
         </ol>
       {:catch error}
         <p>{error.message}</p>
-
       {/await}
     {/if}
-
   </div>
-
 </article>

@@ -50,11 +50,13 @@
 </style>
 
 <article class:playing={!paused}>
+  <!-- svelte-ignore a11y-media-has-caption -->
   <audio
     bind:this={audio}
     bind:paused
     on:play={stopOthers}
     src={audioSrc}
     preload="auto"
-    controls />
+    controls
+  />
 </article>
